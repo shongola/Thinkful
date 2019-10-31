@@ -22,10 +22,10 @@ WITH troubled_edu AS
 (
 	SELECT state,
 		MAX(avg_math_4_score) - MIN(avg_math_4_score) as score_diff,
-    	ROUND(AVG(avg_math_4_score), 2) AS stateavg_math_4_score,
-    	MAX(avg_math_4_score) AS max_math_4_score,
-    	MIN(avg_math_4_score) AS min_math_4_score,
-    	COUNT(avg_math_4_score) AS count_math_4_score
+    		ROUND(AVG(avg_math_4_score), 2) AS stateavg_math_4_score,
+    		MAX(avg_math_4_score) AS max_math_4_score,
+    		MIN(avg_math_4_score) AS min_math_4_score,
+    		COUNT(avg_math_4_score) AS count_math_4_score
 	FROM naep
 	GROUP BY state
 	ORDER BY state ASC
